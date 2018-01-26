@@ -1,0 +1,26 @@
+* {
+    background-color: lightsalmon;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+div {
+    background-color: lightgrey;
+}
+h3 {
+    background-color: inherit;
+}
+ul {
+    background-color: inherit; 
+}
+li {
+    background-color: inherit;
+}
+h2 {
+    background-color: inherit;
+}
+p {
+    background-color: inherit;
+}
