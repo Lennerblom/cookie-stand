@@ -128,9 +128,9 @@ seaTac.render();
 
 var seattleCenter = {
   name: 'Seattle Center',
-  minCust: 23,
-  maxCust: 65,
-  avgCookiePerCust: 6.3,
+  minCust: 11,
+  maxCust: 38,
+  avgCookiePerCust: 3.7,
   randCustHour: [],
   cookieSaleHour: [],
   totalDailyCookies: 0,
@@ -185,9 +185,9 @@ seattleCenter.render();
 
 var capHill = {
   name: 'Capitol Hill',
-  minCust: 23,
-  maxCust: 65,
-  avgCookiePerCust: 6.3,
+  minCust: 20,
+  maxCust: 38,
+  avgCookiePerCust: 2.3,
   randCustHour: [],
   cookieSaleHour: [],
   totalDailyCookies: 0,
@@ -242,9 +242,9 @@ capHill.render();
 
 var alki = {
   name: 'Alki',
-  minCust: 23,
-  maxCust: 65,
-  avgCookiePerCust: 6.3,
+  minCust: 2,
+  maxCust: 16,
+  avgCookiePerCust: 4.6,
   randCustHour: [],
   cookieSaleHour: [],
   totalDailyCookies: 0,
