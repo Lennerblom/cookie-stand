@@ -2,19 +2,18 @@
 
 var hours = ['6am', '7am', '8am', '9am','10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm','5pm','6pm','7pm','8pm'];
 
-/*function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}*/
-function CookieStore(name, minCust, maxCust, avgCookiePerCust, randCustHour, cookieSaleHour, totalDailyCookies) {
+var storeLocations = [];
+
+
+function CookieStore(name, minCust, maxCust, avgCookiePerCust) {
   this.name = name;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCookiePerCust = avgCookiePerCust;
-  this.randCustHour = randCustHour;
-  this.cookieSaleHour = cookieSaleHour;
-  this.totalDailyCookies = totalDailyCookies;
+  this.randCustHour = [];
+  this.cookieSaleHour = [];
+  this.totalDailyCookies = 0;
+  storeLocations.push(this);
 }
 CookieStore.prototype.calcRandCustHour = function() {
   for(var i =0; i < hours.length; i++) {
@@ -37,7 +36,15 @@ CookieStore.prototype.calcTotalDailyCookies = function() {
   }
 };
 
-var pikeStore = new CookieStore('First and Pike', 23, 65, 6.3,[],[],0);
+function makeLocations() {
+  new CookieStore('First and Pike', 23, 65, 6.3);
+  new CookieStore('Seatac Airport', 3, 24, 1.2);
+  new CookieStore('Seattle Center', 11, 38, 3.7);
+  new CookieStore('Capitol Hill', 20, 38, 2.3);
+  new CookieStore('Alki', 2, 16, 4.6);
+}
+
+//var pikeStore = new CookieStore('First and Pike', 23, 65, 6.3);
 
 /*var pike = {
   name: 'First and Pike',
@@ -72,7 +79,7 @@ var pikeStore = new CookieStore('First and Pike', 23, 65, 6.3,[],[],0);
     }
   },*/
 
-cookieStore.prototype.render = function() {
+CookieStore.prototype.render = function() {
   var firstAndPike = document.getElementById('firstAndPike');
   var fnp = document.getElementById('fnp');
   var pikeTotal = document.getElementById('pikeTotal');
@@ -93,9 +100,9 @@ cookieStore.prototype.render = function() {
   var h4El = document.createElement('h4');
   h4El.textContent = 'Total Daily Cookie\'s Sold:  ' + this.totalDailyCookies;
   pikeTotal.appendChild(h4El);
-}
+};
 
-pikeStore.render;
+CookieStore.prototype.render();
 
 /*var seaTac = {
   name: 'SeaTac Airport',
