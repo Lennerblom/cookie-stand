@@ -1,26 +1,116 @@
 * {
-    background-color: lightsalmon;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightslategray;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: midnightblue;
 }
 
 h1 {
-    font-family: 'Permanent Marker', cursive;
+    font-size: 36px;
 }
+#mainHeading {
+    text-align: center;
+    font-size: 72px;
+    font-family: 'Merienda', sans-serif;
+}
+nav {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(100, 53, 53);
+    border-style: ridge;
+    color: azure;
+}
+#navSales {
+    width: 100%;
+    display: inline-block;
+    background-color: lightslategrey;
+    border-style: ridge;
+    color: azure;
+}
+.navlist {
+    list-style: none;
+    background-color: rgb(100, 53, 53);
+    display: inline;
+}
+
 div {
-    background-color: lightgrey;
+    background-color: lightsalmon;
+    margin: 10px;
+    width: 25%;
+    padding: 1.5px;
+    border-style: ridge;
+}
+#welcome {
+    width: 600px;
+    position: absolute;
+    top: 350px;
+}
+
+#location {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 700px;
 }
 h3 {
     background-color: inherit;
+    text-align: center;
+    padding: 10px, 10px, 10px, 40px;
 }
 ul {
     background-color: inherit; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 0px, 0px, 40px, 40px;
 }
 li {
     background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 0px, 0px, 40px, 40px;
+
 }
 h2 {
     background-color: inherit;
+    text-align: center;
 }
 p {
     background-color: inherit;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+    font-style: normal;
+}
+img {
+    width: 450px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    transform: rotate(90deg);
+}
+table {
+    width: 100%;
+    background-color: lightsalmon;
+    font-size: 18px;
+    text-align: left;
+}
+th {
+    background-color: lightsalmon;
+}
+tr {
+    background-color: lightsalmon;
+}
+td {
+    background-color: lightsalmon;
+}
+aside {
+    width: 20%;
+    min-height: 100%;
+    float: right;
+    position: fixed;
+    top: 300px;
+    left: 400px;
+
 }

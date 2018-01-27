@@ -4,30 +4,55 @@
     <title>Salmon Cookies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
     <script src="app.js"></script>
 </head>
 <body>
-    <h1>Salmon Cookie Store</h1>
+    <aside>
     <img src='/Users/michaellennerblom/codefellows/201/cookie-stand/salmon pic.png' alt="Salmon picture"/>
+    </aside>
+    <h1 id="mainHeading">Pat's Salmon Cookies!</h1>
     <nav>
         <ul>
-          <li>
-            <a href="index.html">Home</a>
+          <li class="navlist">
+            <a class="navlist" href="index.html">Home</a>
           </li>
-          <li>
-            <a href="sales.html">Sales</a>
+          <li class="navlist">
+            <a class="navlist" href="sales.html">Sales</a>
           </li>
         </ul>
     </nav>
       
-    <div>
-        <h2>Welcome and Intro</h2>
-        <p>Welcome paragraph</p>
+    <div id="welcome">
+        <h2>Welcome to Pat's Salmon Cookies!</h2>
+        <p>They're cookies made into the shape of a salmon, and actually made with salmon (though the fish is ground up so fine that you can't even taste it!) that is the ideal match for a steaming cup of coffee on a gray Seattle morning. Or gray Seattle afternoon... whatever.</p>
     </div>
-    <div>
-       
-    </div>
+    <div id="location">
+       <h2>Our Locations</h2>
+       <table>
+    <thead>
+        <tr>
+            <th>Location</th>  
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1st and Pike</th>
+            <td>555-1234</td>
+            <td>1st and Pike, Seattle</td>
+        </tr>
+        <tr>
+            <th>SeaTac Airport</th>
+            <td>555-6789</td>
+            <td>concourse b</td>
+        </tr>
+
+    </tbody>
+    </table>
+
+</div>
     <script src='app.js'></script>
 </body>
 </html>
