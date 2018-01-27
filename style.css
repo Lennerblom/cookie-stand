@@ -2,10 +2,13 @@
     background-color: lightslategray;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     color: midnightblue;
+    border-color: goldenrod;
 }
 
 h1 {
     font-size: 36px;
+    border-style: ridge;
+    background-color: lightsalmon;
 }
 #mainHeading {
     text-align: center;
@@ -15,20 +18,22 @@ h1 {
 nav {
     display: inline-block;
     width: 100%;
-    background-color: rgb(100, 53, 53);
+    background-color: rgb(29,29,29);
     border-style: ridge;
     color: azure;
+    border-color: goldenrod;
 }
-#navSales {
+/*#navSales {
     width: 100%;
     display: inline-block;
     background-color: lightslategrey;
     border-style: ridge;
     color: azure;
-}
+    border-color: goldenrod;
+}*/
 .navlist {
     list-style: none;
-    background-color: rgb(100, 53, 53);
+    background-color: rgb(29,29,29);
     display: inline;
 }
 
@@ -46,7 +51,7 @@ div {
 }
 
 #location {
-    width: 100%;
+    width: 50%;
     height: 300px;
     position: absolute;
     top: 700px;
@@ -55,6 +60,12 @@ h3 {
     background-color: inherit;
     text-align: center;
     padding: 10px, 10px, 10px, 40px;
+}
+h4 {
+    background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 16px;
 }
 ul {
     background-color: inherit; 
@@ -84,33 +95,39 @@ a {
     font-style: normal;
 }
 img {
-    width: 450px;
+    width: 650px;
     position: absolute;
     top: 100px;
     left: 100px;
-    transform: rotate(90deg);
+    transform: rotate(270deg);
 }
 table {
     width: 100%;
     background-color: lightsalmon;
     font-size: 18px;
     text-align: left;
+    table-layout: fixed;
 }
 th {
     background-color: lightsalmon;
+    
 }
 tr {
-    background-color: lightsalmon;
+    background-color: rgb(27, 24, 23);
+    
 }
 td {
     background-color: lightsalmon;
+}
+#locTableHead {
+    border-bottom: solid black;
 }
 aside {
     width: 20%;
     min-height: 100%;
     float: right;
     position: fixed;
-    top: 300px;
-    left: 400px;
+    top: 390px;
+    left: 450px;
 
 }

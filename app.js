@@ -31,14 +31,25 @@ var pike = {
       console.log(this.cookieSaleHour[j]);
     }
   },
+  calcTotalDailyCookies: function() {
+    this.cookieSaleHour[l];
+    this.totalDailyCookies = 0;
+    for(var l = 0; l < this.cookieSaleHour.length; l++) {
+      this.totalDailyCookies += this.cookieSaleHour[l];
+      //this.totalDailyCookies += (this.totalDailyCookies + this.cookieSaleHour[l]);
+      console.log(this.totalDailyCookies);
+    }
+  },
 
   render: function() {
     var firstAndPike = document.getElementById('firstAndPike');
     var fnp = document.getElementById('fnp');
+    var pikeTotal = document.getElementById('pikeTotal');
     this.calcRandCustHour();
     this.calcCookieSaleHour();
+    this.calcTotalDailyCookies();
     var h3El = document.createElement('h3');
-    //give text to the nex h3 element
+    //give text to the new h3 element
     h3El.textContent = this.name;
     fnp.appendChild(h3El);
     for(var k = 0; k < hours.length; k++) {
@@ -47,8 +58,11 @@ var pike = {
       liEl.textContent = hours[k] + ': ' + this.cookieSaleHour[k] + ' cookies';
       console.log(liEl);
       firstAndPike.appendChild(liEl);
-
     }
+    var h4El = document.createElement('h4');
+    h4El.textContent = 'Total Daily Cookie\'s Sold:  ' + this.totalDailyCookies;
+    pikeTotal.appendChild(h4El);
+
   }
 
 };
@@ -75,11 +89,22 @@ var seaTac = {
       console.log(this.cookieSaleHour);
     }
   },
+  calcTotalDailyCookies: function() {
+    this.cookieSaleHour[l];
+    this.totalDailyCookies = 0;
+    for(var l = 0; l < this.cookieSaleHour.length; l++) {
+      this.totalDailyCookies += this.cookieSaleHour[l];
+      //this.totalDailyCookies += (this.totalDailyCookies + this.cookieSaleHour[l]);
+      console.log(this.totalDailyCookies);
+    }
+  },
   render: function() {
     var seaTacAirport = document.getElementById('seaTacAirport');
     var seaTac = document.getElementById('seaTac');
+    var seaTacTotal = document.getElementById('seaTacTotal');
     this.calcRandCustHour();
     this.calcCookieSaleHour();
+    this.calcTotalDailyCookies();
     var h3El = document.createElement('h3');
     //give text to the nex h3 element
     h3El.textContent = this.name;
@@ -92,6 +117,9 @@ var seaTac = {
       seaTacAirport.appendChild(liEl);
 
     }
+    var h4El = document.createElement('h4');
+    h4El.textContent = 'Total Daily Cookie\'s Sold:  ' + this.totalDailyCookies;
+    seaTacTotal.appendChild(h4El);
   }
 
 };
@@ -120,11 +148,22 @@ var seattleCenter = {
       console.log(this.cookieSaleHour[j]);
     }
   },
+  calcTotalDailyCookies: function() {
+    this.cookieSaleHour[l];
+    this.totalDailyCookies = 0;
+    for(var l = 0; l < this.cookieSaleHour.length; l++) {
+      this.totalDailyCookies += this.cookieSaleHour[l];
+      //this.totalDailyCookies += (this.totalDailyCookies + this.cookieSaleHour[l]);
+      console.log(this.totalDailyCookies);
+    }
+  },
   render: function() {
     var seaCenter = document.getElementById('seaCenter');
     var seaCent = document.getElementById('seaCent');
+    var seaCenterTotal = document.getElementById('seaCenterTotal');
     this.calcRandCustHour();
     this.calcCookieSaleHour();
+    this.calcTotalDailyCookies();
     var h3El = document.createElement('h3');
     //give text to the nex h3 element
     h3El.textContent = this.name;
@@ -135,8 +174,10 @@ var seattleCenter = {
       liEl.textContent = hours[k] + ': ' + this.cookieSaleHour[k] + ' cookies';
       console.log(liEl);
       seaCenter.appendChild(liEl);
-
     }
+    var h4El = document.createElement('h4');
+    h4El.textContent = 'Total Daily Cookie\'s Sold:  ' + this.totalDailyCookies;
+    seaCenterTotal.appendChild(h4El);
   }
 
 };
@@ -164,11 +205,22 @@ var capHill = {
       console.log(this.cookieSaleHour[j]);
     }
   },
+  calcTotalDailyCookies: function() {
+    this.cookieSaleHour[l];
+    this.totalDailyCookies = 0;
+    for(var l = 0; l < this.cookieSaleHour.length; l++) {
+      this.totalDailyCookies += this.cookieSaleHour[l];
+      //this.totalDailyCookies += (this.totalDailyCookies + this.cookieSaleHour[l]);
+      console.log(this.totalDailyCookies);
+    }
+  },
   render: function() {
     var capitolHill = document.getElementById('capitolHill');
     var capHill = document.getElementById('capHill');
+    var capHillTotal = document.getElementById('capHillTotal');
     this.calcRandCustHour();
     this.calcCookieSaleHour();
+    this.calcTotalDailyCookies();
     var h3El = document.createElement('h3');
     //give text to the nex h3 element
     h3El.textContent = this.name;
@@ -179,8 +231,10 @@ var capHill = {
       liEl.textContent = hours[k] + ': ' + this.cookieSaleHour[k] + ' cookies';
       console.log(liEl);
       capitolHill.appendChild(liEl);
-
     }
+    var h4El = document.createElement('h4');
+    h4El.textContent = 'Total Daily Cookie\'s Sold:  ' + this.totalDailyCookies;
+    capHillTotal.appendChild(h4El);
   }
 
 };
@@ -208,11 +262,22 @@ var alki = {
       console.log(this.cookieSaleHour[j]);
     }
   },
+  calcTotalDailyCookies: function() {
+    this.cookieSaleHour[l];
+    this.totalDailyCookies = 0;
+    for(var l = 0; l < this.cookieSaleHour.length; l++) {
+      this.totalDailyCookies += this.cookieSaleHour[l];
+      //this.totalDailyCookies += (this.totalDailyCookies + this.cookieSaleHour[l]);
+      console.log(this.totalDailyCookies);
+    }
+  },
   render: function() {
     var ulAlki = document.getElementById('ulAlki');
     var alki = document.getElementById('alki');
+    var alkiTotal = document.getElementById('alkiTotal');
     this.calcRandCustHour();
     this.calcCookieSaleHour();
+    this.calcTotalDailyCookies();
     var h3El = document.createElement('h3');
     //give text to the nex h3 element
     h3El.textContent = this.name;
@@ -223,8 +288,10 @@ var alki = {
       liEl.textContent = hours[k] + ': ' + this.cookieSaleHour[k] + ' cookies';
       console.log(liEl);
       ulAlki.appendChild(liEl);
-
     }
+    var h4El = document.createElement('h4');
+    h4El.textContent = 'Total Daily Cookie\'s Sold:  ' + this.totalDailyCookies;
+    alkiTotal.appendChild(h4El);
   }
 
 };
