@@ -2,10 +2,39 @@
 
 var hours = ['6am', '7am', '8am', '9am','10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm','5pm','6pm','7pm','8pm'];
 
-function getRandomInt(min, max) {
+/*function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}*/
+function CookieStore(name, minCust, maxCust, avgCookiePerCust, randCustHour, cookieSaleHour, totalDailyCookies) {
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookiePerCust = avgCookiePerCust;
+  this.randCustHour = randCustHour;
+  this.cookieSaleHour = cookieSaleHour;
+  this.totalDailyCookies = totalDailyCookies;
+  this.calcRandCustHour = function() {
+    for(var i =0; i < hours.length; i++) {
+      this.randCustHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+      console.log(this.randCustHour[i]);
+    }
+  };
+  this.calcCookieSaleHour = function() {
+    for(var j = 0; j < hours.length; j++) {
+      this.cookieSaleHour.push(Math.round(this.avgCookiePerCust * this.randCustHour[j]));
+      console.log(this.cookieSaleHour[j]);
+    }
+  };
+  this.calcTotalDailyCookies = function() {
+    this.cookieSaleHour[l];
+    this.totalDailyCookies = 0;
+    for(var l = 0; l < this.cookieSaleHour.length; l++) {
+      this.totalDailyCookies += this.cookieSaleHour[l];
+      console.log(this.totalDailyCookies);
+    }
+  };
 }
 
 var pike = {
@@ -18,8 +47,8 @@ var pike = {
   totalDailyCookies: 0,
   calcRandCustHour: function() {
     for(var i =0; i < hours.length; i++) {
-      this.randCustHour.push(getRandomInt(this.minCust, this.maxCust));
-      //this.randCustHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+      //this.randCustHour.push(getRandomInt(this.minCust, this.maxCust));
+      this.randCustHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
       console.log(this.randCustHour[i]);
     }
 
