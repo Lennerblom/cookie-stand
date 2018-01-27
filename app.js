@@ -14,28 +14,32 @@ function CookieStore(name, minCust, maxCust, avgCookiePerCust) {
   this.cookieSaleHour = [];
   this.totalDailyCookies = 0;
   storeLocations.push(this);
-}
-CookieStore.prototype.calcRandCustHour = function() {
-  for(var i =0; i < hours.length; i++) {
-    this.randCustHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
-    console.log(this.randCustHour[i]);
-  }
-};
-CookieStore.prototype.calcCookieSaleHour = function() {
-  for(var j = 0; j < hours.length; j++) {
-    this.cookieSaleHour.push(Math.round(this.avgCookiePerCust * this.randCustHour[j]));
-    console.log(this.cookieSaleHour[j]);
-  }
-};
-CookieStore.prototype.calcTotalDailyCookies = function() {
-  this.cookieSaleHour[l];
-  this.totalDailyCookies = 0;
-  for(var l = 0; l < this.cookieSaleHour.length; l++) {
-    this.totalDailyCookies += this.cookieSaleHour[l];
-    console.log(this.totalDailyCookies);
-  }
-};
 
+  this.calcRandCustHour = function() {
+    for(var i =0; i < hours.length; i++) {
+      this.randCustHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+      console.log(this.randCustHour[i]);
+    }
+  };
+  this.calcCookieSaleHour = function() {
+    for(var j = 0; j < hours.length; j++) {
+      this.cookieSaleHour.push(Math.round(this.avgCookiePerCust * this.randCustHour[j]));
+      console.log(this.cookieSaleHour[j]);
+    }
+  };
+  this.calcTotalDailyCookies = function() {
+    this.cookieSaleHour[l];
+    this.totalDailyCookies = 0;
+    for(var l = 0; l < this.cookieSaleHour.length; l++) {
+      this.totalDailyCookies += this.cookieSaleHour[l];
+      console.log(this.totalDailyCookies);
+    }
+  };
+
+  this.calcRandCustHour();
+  this.calcCookieSaleHour();
+  this.calcTotalDailyCookies();
+}
 function makeLocations() {
   new CookieStore('First and Pike', 23, 65, 6.3);
   new CookieStore('Seatac Airport', 3, 24, 1.2);
@@ -43,7 +47,7 @@ function makeLocations() {
   new CookieStore('Capitol Hill', 20, 38, 2.3);
   new CookieStore('Alki', 2, 16, 4.6);
 }
-
+makeLocations();
 //var pikeStore = new CookieStore('First and Pike', 23, 65, 6.3);
 
 /*var pike = {
@@ -79,7 +83,7 @@ function makeLocations() {
     }
   },*/
 
-CookieStore.prototype.render = function() {
+/*CookieStore.prototype.render = function() {
   var firstAndPike = document.getElementById('firstAndPike');
   var fnp = document.getElementById('fnp');
   var pikeTotal = document.getElementById('pikeTotal');
@@ -102,7 +106,7 @@ CookieStore.prototype.render = function() {
   pikeTotal.appendChild(h4El);
 };
 
-CookieStore.prototype.render();
+CookieStore.prototype.render();*/
 
 /*var seaTac = {
   name: 'SeaTac Airport',
