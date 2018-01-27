@@ -1,0 +1,192 @@
+* {
+    background-color: lightslategray;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: midnightblue;
+    border-color: goldenrod;
+}
+
+h1 {
+    font-size: 36px;
+    border-style: ridge;
+    background-color: lightsalmon;
+}
+#mainHeading {
+    text-align: center;
+    font-size: 72px;
+    font-family: 'Merienda', sans-serif;
+}
+nav {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(29,29,29);
+    border-style: ridge;
+    color: azure;
+    border-color: goldenrod;
+}
+/*#navSales {
+    width: 100%;
+    display: inline-block;
+    background-color: lightslategrey;
+    border-style: ridge;
+    color: azure;
+    border-color: goldenrod;
+}*/
+.navlist {
+    list-style: none;
+    background-color: rgb(29,29,29);
+    display: inline;
+}
+
+div {
+    background-color: lightsalmon;
+    margin: 10px;
+    width: 25%;
+    padding: 1.5px;
+    border-style: ridge;
+    z-index: 5;
+}
+p {
+    background-color: inherit;
+    font-size: 18px;
+}
+#welcome {
+    width: 600px;
+    position: absolute;
+    top: 300px;
+    z-index: 5;
+}
+#bestEver {
+    width: 400px;
+    position: absolute;
+    top: 525px;
+    left: 950px;
+    z-index: 10;
+    transform: rotate(10deg);
+    font-size: 24px;
+}
+#bestEver2 {
+    width: 400px;
+    position: absolute;
+    top: 325px;
+    left: 950px;
+    z-index: 9;
+    background-color: salmon;
+    font-size: 18px;
+}
+#bestEver3 {
+    width: 400px;
+    position: absolute;
+    top: 425px;
+    left: 950px;
+    z-index: 8;
+    transform: rotate(-15deg);
+    background-color: saddlebrown;
+    font-size: 18px;
+}
+#bestEver4 {
+    width: 400px;
+    position: absolute;
+    top: 725px;
+    left: 950px;
+    z-index: 7;
+    transform: rotate(-10deg);
+    background-color: rgb(101, 98, 119);
+    font-size: 18px;
+    color: black;
+}
+
+#location {
+    width: 60%;
+    height: 300px;
+    position: absolute;
+    top: 700px;
+    z-index: 5;
+}
+h3 {
+    background-color: inherit;
+    text-align: center;
+    padding: 10px, 10px, 10px, 40px;
+}
+#hours {
+    position: absolute;
+    top: 550px;
+    left: 250px;
+    width: 500px;
+    background-color: rgb(29,29,29);
+    color: azure;
+    font-size: 24px;
+}
+h5 {
+    color: rgb(194, 197, 197);
+    background-color: rgb(29,29,29);
+    font-size: 20px;
+    text-align: center
+}
+h4 {
+    background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 16px;
+}
+ul {
+    background-color: inherit; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 0px, 0px, 40px, 40px;
+}
+li {
+    background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 0px, 0px, 40px, 40px;
+
+}
+h2 {
+    background-color: inherit;
+    text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(194, 197, 197);
+    font-style: normal;
+}
+img {
+    width: 650px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    transform: rotate(270deg);
+    z-index: 10;
+}
+table {
+    width: 100%;
+    background-color: lightsalmon;
+    font-size: 18px;
+    text-align: left;
+    table-layout: fixed;
+}
+th {
+    background-color: lightsalmon;
+    
+}
+tr {
+    background-color: rgb(27, 24, 23);
+    
+}
+td {
+    background-color: lightsalmon;
+}
+#locTableHead {
+    border-bottom: solid black;
+}
+aside {
+    width: 20%;
+    min-height: 100%;
+    float: right;
+    position: fixed;
+    top: 390px;
+    left: 450px;
+
+}
