@@ -162,7 +162,7 @@ img {
 }
 table {
     width: 100%;
-    background-color: lightsalmon;
+    background-color: rgb(29, 29, 29);
     font-size: 18px;
     text-align: left;
     table-layout: fixed;
@@ -172,20 +172,27 @@ table {
 
 }
 th {
-    background-color: lightsalmon;
+    background-color: rgb(29,29,29);
     border-style: ridge;
-    border-color: goldenrod;
-    
+    border-color: lightsalmon;
+    color: rgb(194, 197, 197);
+    text-align: center;
 }
 tr {
     background-color: rgb(27, 24, 23);
     border-style: ridge;
-    border-color: goldenrod;
+    border-color: rgb(82, 65, 25);
+    
+}
+tr.even {
+    background-color: gainsboro;
 }
 td {
     background-color: lightsalmon;
     border-style: ridge;
     border-color: goldenrod;
+    color: black;
+    text-align: right;
 }
 #locTableHead {
     border-bottom: solid black;
@@ -197,5 +204,16 @@ aside {
     position: fixed;
     top: 390px;
     left: 450px;
-
+}
+#newStore{
+    float: left;
+}
+#minCust {
+    float: left;
+}
+#maxCust {
+    float: left;
+}
+#avgCookie {
+    float: left;
 }
