@@ -173,14 +173,19 @@ table {
 }
 th {
     background-color: lightsalmon;
+    border-style: ridge;
+    border-color: goldenrod;
     
 }
 tr {
     background-color: rgb(27, 24, 23);
-    
+    border-style: ridge;
+    border-color: goldenrod;
 }
 td {
     background-color: lightsalmon;
+    border-style: ridge;
+    border-color: goldenrod;
 }
 #locTableHead {
     border-bottom: solid black;
