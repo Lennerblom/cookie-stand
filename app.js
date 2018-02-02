@@ -46,7 +46,6 @@ var seaCent = new CookieStore('Seattle Center', 11, 38, 3.7);
 var capHill = new CookieStore('Capitol Hill', 20, 38, 2.3);
 var alki = new CookieStore('Alki', 2, 16, 4.6);
 
-
 function makeTableHead() {
   var cookieTable = document.getElementById('cookieTable');
   var trEl = document.createElement('tr');
@@ -88,7 +87,50 @@ function makeTableRow1(){
       tdEl.textContent = storeLocations[i].totalDailyCookies;
       trEl.appendChild(tdEl);
       cookieTable.appendChild(trEl);
+      console.log(trEl.appendChild(tdEl));
     }
   }
 }
 makeTableRow1();
+
+
+/*function newStoreLocation() {                             // Declare function
+  var addNewStore = document.getElementById('newStore');     // Get feedback element
+
+}
+  
+var elUsername = document.getElementById('username');  // Get username input
+// When it loses focus call checkUsername()
+elUsername.addEventListener('blur', checkUsername, false);*/
+//this function is the event handler for the submission of a new store
+var newStoreForm = document.getElementById('newStoreform');
+
+function handleStoreAdd(event) {
+  console.log('log of the event object', event);
+  console.log('log of the event.target', event.target);
+  console.log('log of the event.target.storename', event.target.storeName);
+  console.log('log of the event.target.storename.value', event.target.storeName.value);
+
+  event.preventDefault(); //gotta have it to prevent page reload on a submit event
+  //telling the user to fill in the form properly. So if the form is empty somewhere they get the alert
+  if(!event.target.storeName.value || !event.target.minCust.value || !event.target.maxCust.value || !event.target.avgCookie.value) {
+    return alert('You must enter a value; please do not leave blank.');
+  }
+  //target the name in the form
+  var newStoreName = event.target.storeName.value;
+  var newStoreMinCust = parseInt(event.target.minCust.value);
+  var newStoreMaxCust = parseInt(event.target.maxCust.value);
+  var newStoreAvgCookie = parseInt(event.target.avgCookie.value);
+
+  var newStore = new CookieStore(newStoreName, newStoreMinCust, newStoreMaxCust, newStoreAvgCookie);
+
+  newStore.render();
+
+  event.target.storeName.value = null;
+  event.target.minCust.value = null;
+  event.target.maxCust.value = null;
+  event.target.avgCookie.value = null;
+
+
+}
+newStoreForm.addEventListener('submit', handleStoreAdd);

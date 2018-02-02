@@ -1,14 +1,14 @@
 * {
-    background-color: lightslategray;
+    background-color: antiquewhite; 
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     color: midnightblue;
-    border-color: goldenrod;
+    border-color: rgb(66, 64, 60);
 }
 
 h1 {
     font-size: 36px;
     border-style: ridge;
-    background-color: lightsalmon;
+    background-color: lightgray;
 }
 #mainHeading {
     text-align: center;
@@ -18,10 +18,10 @@ h1 {
 nav {
     display: inline-block;
     width: 100%;
-    background-color: rgb(29,29,29);
+    background-color: lightslategray;
     border-style: ridge;
     color: azure;
-    border-color: goldenrod;
+    border-color: rgb(66, 64, 60);
 }
 /*#navSales {
     width: 100%;
@@ -33,12 +33,13 @@ nav {
 }*/
 .navlist {
     list-style: none;
-    background-color: rgb(29,29,29);
+    background-color: inherit;
     display: inline;
+    margin-right: 50px;
 }
 
 div {
-    background-color: lightsalmon;
+    background-color: lightgray;
     margin: 10px;
     width: 25%;
     padding: 1.5px;
@@ -70,7 +71,7 @@ p {
     top: 325px;
     left: 950px;
     z-index: 9;
-    background-color: salmon;
+    background-color: lightgray;
     font-size: 18px;
 }
 #bestEver3 {
@@ -112,13 +113,13 @@ h3 {
     top: 550px;
     left: 250px;
     width: 500px;
-    background-color: rgb(29,29,29);
+    background-color: lightslategray;
     color: azure;
     font-size: 24px;
 }
 h5 {
     color: rgb(194, 197, 197);
-    background-color: rgb(29,29,29);
+    background-color: rgblightslategray;
     font-size: 20px;
     text-align: center
 }
@@ -162,24 +163,24 @@ img {
 }
 table {
     width: 100%;
-    background-color: rgb(29, 29, 29);
+    background-color: lightslategray;
     font-size: 18px;
     text-align: left;
     table-layout: fixed;
     position: absolute;
-    top: 300px;
+    top: 500px;
     height: 50px;
 
 }
 th {
     background-color: rgb(29,29,29);
     border-style: ridge;
-    border-color: lightsalmon;
+    border-color: lightgray;
     color: rgb(194, 197, 197);
     text-align: center;
 }
 tr {
-    background-color: rgb(27, 24, 23);
+    background-color: lightslategray;
     border-style: ridge;
     border-color: rgb(82, 65, 25);
     
@@ -188,9 +189,9 @@ tr.even {
     background-color: gainsboro;
 }
 td {
-    background-color: lightsalmon;
+    background-color: lightgray;
     border-style: ridge;
-    border-color: goldenrod;
+    border-color: (66, 64, 60);
     color: black;
     text-align: right;
 }
