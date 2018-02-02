@@ -21,18 +21,15 @@
     <form id='newStoreForm'>
         <fieldset>
             <legend>New Franchise Information</legend>
-            <p id="storeName">Add New Store Location:
-            <input type="text" name="Store Location"/>
-            </p>
-            <p id="minCust">Minimum Customers Per Hour:
-                <input type="text" name="Minimum Customers per hour"/>
-            </p>
-            <p id="maxCust">Maximum Customers Per Hour:
-                <input type="text" name="Maxumum Customers per hour"/>
-            </p>
-            <p id=avgCookie>Average Cookies Per Customer:
-                <input type="text" name="Average Cookies per customer"/>
-            </p>
+            <label for="storeName">Add New Store Location:</label>
+                <input name="storeName" type="text" />
+            <label for="minCust">Minimum Customers Per Hour:</label>
+                <input type="text" name="minCust"/>
+            <label for="maxCust">Maximum Customers Per Hour:</label>
+                <input type="text" name="maxCust"/>
+            <label for=avgCookie>Average Cookies Per Customer:</label>
+                <input type="text" name="avgCookie"/>
+            
             <button type="submit">Make New Franchise</button>
         </fieldset>
     </form>

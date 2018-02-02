@@ -103,28 +103,28 @@ var elUsername = document.getElementById('username');  // Get username input
 // When it loses focus call checkUsername()
 elUsername.addEventListener('blur', checkUsername, false);*/
 //this function is the event handler for the submission of a new store
-var newStoreForm = document.getElementById('newStoreform');
+var newStoreForm = document.getElementById('newStoreForm');
 
 function handleStoreAdd(event) {
+  event.preventDefault();
   console.log('log of the event object', event);
   console.log('log of the event.target', event.target);
   console.log('log of the event.target.storename', event.target.storeName);
   console.log('log of the event.target.storename.value', event.target.storeName.value);
 
-  event.preventDefault(); //gotta have it to prevent page reload on a submit event
+  //gotta have it to prevent page reload on a submit event
   //telling the user to fill in the form properly. So if the form is empty somewhere they get the alert
-  if(!event.target.storeName.value || !event.target.minCust.value || !event.target.maxCust.value || !event.target.avgCookie.value) {
-    return alert('You must enter a value; please do not leave blank.');
-  }
+  // if(!newStoreName || !newStoreMinCust || !newStoreMaxCust || !newStoreAvgCookie) {
+  //  return alert('You must enter a value; please do not leave blank.');
+  //}
   //target the name in the form
   var newStoreName = event.target.storeName.value;
   var newStoreMinCust = parseInt(event.target.minCust.value);
   var newStoreMaxCust = parseInt(event.target.maxCust.value);
   var newStoreAvgCookie = parseInt(event.target.avgCookie.value);
 
-  var newStore = new CookieStore(newStoreName, newStoreMinCust, newStoreMaxCust, newStoreAvgCookie);
-
-  newStore.render();
+  var newStore = new CookieStore(newStoreName, newStoreMinCust, newStoreMaxCust, newStoreAvgCookie);console.log(newStore);
+  makeTableRow1();
 
   event.target.storeName.value = null;
   event.target.minCust.value = null;
