@@ -42,20 +42,21 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
+/*table {
+    border-style: solid;
+    border-color: #000;
 	border-spacing: 0;
 }
 
 /* HEADER */
-
+/*
 body {
     font-family: Helvetica;
 }
 
 header {
     background-color:  #444;
-    height: 100px;
+    height: 300px;
 }
 
 nav {
@@ -67,6 +68,7 @@ header img {
     float: left;
     margin-top: 15px;
     margin-right: 30px;
+    width: 250px;
 }
 
 header ul li {
@@ -84,7 +86,7 @@ ul {
 }
 
 /* MAIN - SUB BANNERS */
-
+/*
 main {
     width: 960px;
     margin: 30px auto;
@@ -102,7 +104,7 @@ main ul li:last-child {
 }
 
 /* MAIN - FEATURED SECTION */
-
+/*
 section img {
     float: left;
 }
@@ -130,17 +132,18 @@ section div p {
 button {
     border: none;
     padding: 10px 30px;
-    background: #000;
+    background-color: rgb(63,59,59);
     color: #fff;
     border-radius: 3px;
     font-size: 18px;
     margin-top: 10px;
     transition: 350ms;
     cursor: pointer;
+
 }
 
 button:hover {
-    background: rgb(53, 53, 52);
+    background: rgb(116, 116, 114);
 }
 
 /* FOOTER */
@@ -173,12 +176,31 @@ h1 {
     font-size: 72px;
     font-family: 'Merienda', sans-serif;
 }
-nav {
+header {
+    background-color:  #444;
+    height: 200px;
+}
+
+header img {
+    float: left;
+    margin-top: 15px;
+    margin-right: 30px;
+    width: 250px;
+}
+
+header ul li {
     display: inline-block;
+    margin-top: 40px;
+    margin-right: 75px;
+}
+nav {
+    width: 960px;
+    margin: 0px auto;
+    display: inline-block;
+    vertical-align: middle;
     width: 100%;
-    background-color: lightslategray;
+    background-color: #444;
     border-style: ridge;
-    color: azure;
     border-color: rgb(66, 64, 60);
 }
 /*#navSales {
@@ -194,6 +216,7 @@ nav {
     background-color: inherit;
     display: inline;
     margin-right: 50px;
+    vertical-align: middle;
 }
 
 div {
@@ -209,9 +232,10 @@ p {
     font-size: 18px;
 }
 #welcome {
-    width: 600px;
+    width: 500px;
     position: absolute;
     top: 300px;
+    left: 500px;
     z-index: 5;
 }
 #bestEver {
@@ -311,14 +335,14 @@ a {
     color: rgb(194, 197, 197);
     font-style: normal;
 }
-img {
+/*img {
     width: 650px;
     position: absolute;
     top: 100px;
     left: 100px;
     transform: rotate(270deg);
     z-index: 10;
-}
+}*/
 table {
     width: 100%;
     background-color: lightslategray;
@@ -332,17 +356,26 @@ table {
 
 }
 th {
-    background-color: rgb(29,29,29);
+    background-color: rgb(63, 59, 59);
     border-style: ridge black;
-    border-color: lightgray;
+    border-color: rgb(5, 5, 5);
     color: rgb(194, 197, 197);
     text-align: center;
+    vertical-align: middle;
 }
 tr {
     background-color: lightslategray;
     border-style: ridge black;
     border-color: rgb(82, 65, 25);
-    
+    text-align: center;
+    height: 40px;
+}
+tr :first-child {
+    background-color: rgb(63,59,59);
+    color: rgb(194, 197, 197);
+    text-align: center;
+    vertical-align: middle;
+    width: 75px;
 }
 tr.even {
     background-color: gainsboro;
