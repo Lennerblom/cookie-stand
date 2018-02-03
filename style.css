@@ -1,27 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/*table {
+    border-style: solid;
+    border-color: #000;
+	border-spacing: 0;
+}
+
+/* HEADER */
+/*
+body {
+    font-family: Helvetica;
+}
+
+header {
+    background-color:  #444;
+    height: 300px;
+}
+
+nav {
+    width: 960px;
+    margin: 0px auto;
+}
+
+header img {
+    float: left;
+    margin-top: 15px;
+    margin-right: 30px;
+    width: 250px;
+}
+
+header ul li {
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 75px;
+}
+
+a {
+    text-decoration: none;
+    color: #888;
+}
+ul {
+    list-style-type: none;
+}
+
+/* MAIN - SUB BANNERS */
+/*
+main {
+    width: 960px;
+    margin: 30px auto;
+}
+
+main ul li {
+    list-style: none;
+    float: left;
+    margin: 30px 30px 30px 0px;
+    
+}
+
+main ul li:last-child {
+    margin-right: 0px;
+}
+
+/* MAIN - FEATURED SECTION */
+/*
+section img {
+    float: left;
+}
+
+section div {
+    width: calc(50% - 30px);
+    float: left;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+section div p {
+    height: 320px;
+    overflow: auto;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 24px;
+}
+
+button {
+    border: none;
+    padding: 10px 30px;
+    background-color: rgb(63,59,59);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: 350ms;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background: rgb(116, 116, 114);
+}
+
+/* FOOTER */
+
+footer {
+    clear: both;
+    background: #444;
+    height: 150px;
+}
+
+
+
+
+
+
 * {
-    background-color: lightslategray;
+    background-color: antiquewhite; 
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     color: midnightblue;
-    border-color: goldenrod;
+    border-color: rgb(66, 64, 60);
 }
 
 h1 {
     font-size: 36px;
     border-style: ridge;
-    background-color: lightsalmon;
+    background-color: lightgray;
 }
 #mainHeading {
     text-align: center;
     font-size: 72px;
     font-family: 'Merienda', sans-serif;
 }
-nav {
+header {
+    background-color:  #444;
+    height: 200px;
+}
+
+header img {
+    float: left;
+    margin-top: 15px;
+    margin-right: 30px;
+    width: 250px;
+}
+
+header ul li {
     display: inline-block;
+    margin-top: 40px;
+    margin-right: 75px;
+}
+nav {
+    width: 960px;
+    margin: 0px auto;
+    display: inline-block;
+    vertical-align: middle;
     width: 100%;
-    background-color: rgb(29,29,29);
+    background-color: #444;
     border-style: ridge;
-    color: azure;
-    border-color: goldenrod;
+    border-color: rgb(66, 64, 60);
 }
 /*#navSales {
     width: 100%;
@@ -33,12 +213,14 @@ nav {
 }*/
 .navlist {
     list-style: none;
-    background-color: rgb(29,29,29);
+    background-color: inherit;
     display: inline;
+    margin-right: 50px;
+    vertical-align: middle;
 }
 
 div {
-    background-color: lightsalmon;
+    background-color: lightgray;
     margin: 10px;
     width: 25%;
     padding: 1.5px;
@@ -50,9 +232,10 @@ p {
     font-size: 18px;
 }
 #welcome {
-    width: 600px;
+    width: 500px;
     position: absolute;
     top: 300px;
+    left: 500px;
     z-index: 5;
 }
 #bestEver {
@@ -70,7 +253,7 @@ p {
     top: 325px;
     left: 950px;
     z-index: 9;
-    background-color: salmon;
+    background-color: lightgray;
     font-size: 18px;
 }
 #bestEver3 {
@@ -112,13 +295,13 @@ h3 {
     top: 550px;
     left: 250px;
     width: 500px;
-    background-color: rgb(29,29,29);
+    background-color: lightslategray;
     color: azure;
     font-size: 24px;
 }
 h5 {
     color: rgb(194, 197, 197);
-    background-color: rgb(29,29,29);
+    background-color: rgblightslategray;
     font-size: 20px;
     text-align: center
 }
@@ -152,35 +335,56 @@ a {
     color: rgb(194, 197, 197);
     font-style: normal;
 }
-img {
+/*img {
     width: 650px;
     position: absolute;
     top: 100px;
     left: 100px;
     transform: rotate(270deg);
     z-index: 10;
-}
+}*/
 table {
     width: 100%;
-    background-color: lightsalmon;
+    background-color: lightslategray;
     font-size: 18px;
     text-align: left;
     table-layout: fixed;
     position: absolute;
-    top: 300px;
+    top: 500px;
     height: 50px;
+    border-style: ridge black;
 
 }
 th {
-    background-color: lightsalmon;
-    
+    background-color: rgb(63, 59, 59);
+    border-style: ridge black;
+    border-color: rgb(5, 5, 5);
+    color: rgb(194, 197, 197);
+    text-align: center;
+    vertical-align: middle;
 }
 tr {
-    background-color: rgb(27, 24, 23);
-    
+    background-color: lightslategray;
+    border-style: ridge black;
+    border-color: rgb(82, 65, 25);
+    text-align: center;
+    height: 40px;
+}
+tr :first-child {
+    background-color: rgb(63,59,59);
+    color: rgb(194, 197, 197);
+    text-align: center;
+    vertical-align: middle;
+    width: 75px;
+}
+tr.even {
+    background-color: gainsboro;
 }
 td {
-    background-color: lightsalmon;
+    background-color: lightgray;
+    border-style: solid black;
+    color: black;
+    text-align: right;
 }
 #locTableHead {
     border-bottom: solid black;
@@ -192,5 +396,16 @@ aside {
     position: fixed;
     top: 390px;
     left: 450px;
-
+}
+#newStore{
+    float: left;
+}
+#minCust {
+    float: left;
+}
+#maxCust {
+    float: left;
+}
+#avgCookie {
+    float: left;
 }
