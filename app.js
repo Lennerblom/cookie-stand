@@ -3,7 +3,7 @@
 var hours = ['6am', '7am', '8am', '9am','10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm','5pm','6pm','7pm','8pm'];
 
 var storeLocations = [];
-var totalCookiesByHour = 0;
+var totalCookiesByHour = [];
 var totalTotal = 0;
 
 function CookieStore(name, minCust, maxCust, avgCookiePerCust) {
@@ -13,6 +13,7 @@ function CookieStore(name, minCust, maxCust, avgCookiePerCust) {
   this.avgCookiePerCust = avgCookiePerCust;
   this.randCustHour = [];
   this.cookieSaleHour = [];
+  //this.totalCookiesByHour = [];
   this.totalDailyCookies = 0;
   storeLocations.push(this);
 
@@ -36,9 +37,18 @@ function CookieStore(name, minCust, maxCust, avgCookiePerCust) {
       console.log(this.totalDailyCookies);
     }
   };
+  /*this.calcTotalCookiesByHour = function() {
+    for(var m = 0; m < storeLocations.length; m++) {
+      for(var l = 0; l < hours.length; l++) {
+        this.totalCookiesByHour += storeLocations[m].cookieSaleHour[l];
+        console.log(this.totalCookiesByHour);*/
+  //}
+  //}
+  //};
   this.calcRandCustHour();
   this.calcCookieSaleHour();
   this.calcTotalDailyCookies();
+  //this.calcTotalCookiesByHour();
 }
 var pike = new CookieStore('First and Pike', 23, 65, 6.3);
 var seaTac =new CookieStore('Seatac Airport', 3, 24, 1.2);
@@ -91,8 +101,32 @@ function makeTableRow1(){
     }
   }
 }
+
 makeTableRow1();
 
+function makeTableTotal(){
+  var cookieTable = document.getElementById('cookieTable');
+  var trEl = document.createElement('tr');
+  var thEl = document.createElement('th');
+  var tdEl = document.createElement('td');
+  //var total = storeLocations[i].totalDailyCookies;
+  trEl = document.createElement('tr');
+  thEl.textContent = 'total';
+  trEl.appendChild(thEl);
+  var hoursTotal = 0;
+  for (var j = 0; j < hours.length; j++){
+    tdEl = document.createElement('td');
+    for (var i = 0; i < storeLocations.length; i++){
+      hoursTotal += storeLocations[i].cookieSaleHour[j];
+    }
+    tdEl.textContent = hoursTotal;
+    trEl.appendChild(tdEl);
+    cookieTable.appendChild(trEl);
+    console.log(trEl.appendChild(tdEl));
+
+  }
+}
+makeTableTotal();
 
 /*function newStoreLocation() {                             // Declare function
   var addNewStore = document.getElementById('newStore');     // Get feedback element
@@ -112,18 +146,21 @@ function handleStoreAdd(event) {
   console.log('log of the event.target.storename', event.target.storeName);
   console.log('log of the event.target.storename.value', event.target.storeName.value);
 
-  //gotta have it to prevent page reload on a submit event
-  //telling the user to fill in the form properly. So if the form is empty somewhere they get the alert
-  // if(!newStoreName || !newStoreMinCust || !newStoreMaxCust || !newStoreAvgCookie) {
-  //  return alert('You must enter a value; please do not leave blank.');
-  //}
-  //target the name in the form
   var newStoreName = event.target.storeName.value;
   var newStoreMinCust = parseInt(event.target.minCust.value);
   var newStoreMaxCust = parseInt(event.target.maxCust.value);
   var newStoreAvgCookie = parseInt(event.target.avgCookie.value);
+  //gotta have it to prevent page reload on a submit event
+  //telling the user to fill in the form properly. So if the form is empty somewhere they get the alert
+  if(!newStoreName || !newStoreMinCust || !newStoreMaxCust || !newStoreAvgCookie) {
+    return alert('You must enter a value; please do not leave blank.');
+  }
+  //target the name in the form
+  
 
   var newStore = new CookieStore(newStoreName, newStoreMinCust, newStoreMaxCust, newStoreAvgCookie);console.log(newStore);
+
+
   makeTableRow1();
 
   event.target.storeName.value = null;
