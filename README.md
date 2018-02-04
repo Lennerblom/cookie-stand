@@ -1,2 +1,2 @@
 # cookie-stand
-Salmon Cookies Lab 6
+Salmon Cookies Lab 
