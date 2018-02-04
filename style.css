@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+/*
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers *//*
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -40,8 +40,9 @@ blockquote, q {
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
-	content: none;
-}
+    content: none;8
+    
+}*/
 /*table {
     border-style: solid;
     border-color: #000;
@@ -128,7 +129,7 @@ section div p {
     font-style: italic;
     line-height: 24px;
 }
-
+*/
 button {
     border: none;
     padding: 10px 30px;
@@ -150,8 +151,8 @@ button:hover {
 
 footer {
     clear: both;
-    background: #444;
-    height: 150px;
+    background-color: rgb(63,59,59);
+    height: 300px;
 }
 
 
@@ -167,6 +168,7 @@ footer {
 }
 
 h1 {
+    width: 100%;
     font-size: 36px;
     border-style: ridge;
     background-color: lightgray;
@@ -186,8 +188,11 @@ header img {
     margin-top: 15px;
     margin-right: 30px;
     width: 250px;
+    background-color: none;
 }
-
+#salmon {
+    background-color:
+}
 header ul li {
     display: inline-block;
     margin-top: 40px;
@@ -286,9 +291,12 @@ p {
     z-index: 5;
 }
 h3 {
+    font-size: 24px;
+    color: rgb(194, 197, 197);
     background-color: inherit;
-    text-align: center;
+    text-align: left;
     padding: 10px, 10px, 10px, 40px;
+    margin-left: 200px;
 }
 #hours {
     position: absolute;
@@ -345,12 +353,10 @@ a {
 }*/
 table {
     width: 100%;
-    background-color: lightslategray;
+    background-color: rgb(63,59,59);
     font-size: 18px;
     text-align: left;
     table-layout: fixed;
-    position: absolute;
-    top: 500px;
     height: 50px;
     border-style: ridge black;
 
@@ -364,7 +370,7 @@ th {
     vertical-align: middle;
 }
 tr {
-    background-color: lightslategray;
+    background-color: rgb(63,59,59); background-color: lightslategray;
     border-style: ridge black;
     border-color: rgb(82, 65, 25);
     text-align: center;
@@ -375,27 +381,21 @@ tr :first-child {
     color: rgb(194, 197, 197);
     text-align: center;
     vertical-align: middle;
-    width: 75px;
+    width: 150px;
 }
 tr.even {
     background-color: gainsboro;
 }
 td {
-    background-color: lightgray;
+    background-color: rgb(63,59,59);
     border-style: solid black;
-    color: black;
-    text-align: right;
+    color: rgb(194, 197, 197);
+    text-align: center;
 }
 #locTableHead {
     border-bottom: solid black;
 }
-aside {
-    width: 20%;
-    min-height: 100%;
-    float: right;
-    position: fixed;
-    top: 390px;
-    left: 450px;
+
 }
 #newStore{
     float: left;

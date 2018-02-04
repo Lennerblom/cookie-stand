@@ -1,6 +1,6 @@
 'use strict';
 
-var hours = ['6am', '7am', '8am', '9am','10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm','5pm','6pm','7pm','8pm'];
+var hours = ['6am', '7am', '8am', '9am','10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm','5pm','6pm','7pm',];
 
 var storeLocations = [];
 var totalCookiesByHour = [];
@@ -105,7 +105,7 @@ function makeTableRow1(){
 makeTableRow1();
 //TOTALS BY HOUR ROW
 function makeTableHourlyTotal(){
-  var cookieTable = document.getElementById('cookieTable');
+  var totalTable = document.getElementById('totalTable');
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
   var tdEl = document.createElement('td');
@@ -120,14 +120,15 @@ function makeTableHourlyTotal(){
     }
     tdEl.textContent = hoursTotal;
     trEl.appendChild(tdEl);
-    cookieTable.appendChild(trEl);
+    totalTable.appendChild(trEl);
+    hoursTotal = 0;
   }
 
   tdEl = document.createElement('td');
   totalTotal += hoursTotal;
   tdEl.textContent = totalTotal;
   trEl.appendChild(tdEl);
-  cookieTable.appendChild(trEl);
+  totalTable.appendChild(trEl);
   console.log(trEl.appendChild(tdEl));
 }
 makeTableHourlyTotal();
@@ -153,17 +154,62 @@ function handleStoreAdd(event) {
   //target the name in the form
 
 
-  var newStore = new CookieStore(newStoreName, newStoreMinCust, newStoreMaxCust, newStoreAvgCookie);console.log(newStore);
+  var newStore = new CookieStore(newStoreName, newStoreMinCust, newStoreMaxCust, newStoreAvgCookie);
+  console.log(newStore);
+  storeLocations.push(newStore);
 
-  
+  var cookieTable = document.getElementById('cookieTable');
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  trEl = document.createElement('tr');
+  tdEl.textContent = storeLocations[storeLocations.length-1].name;
+  trEl.appendChild(tdEl);
 
-  function deleteTable() {
-    var cookieTable = document.getElementById('cookieTable');
-    for(var i = cookieTable.rows.length; i<0; i--) {
-      cookieTable.deleteRow(i-1);
-    }
+  for(var j = 0; j < hours.length; j++) {
+    tdEl = document.createElement('td');
+    tdEl.textContent = storeLocations[storeLocations.length-1].cookieSaleHour[j];
+    trEl.appendChild(tdEl);
+    console.log(trEl.appendChild(tdEl));
   }
-  deleteTable();
+  for(var k = 1; k < 2; k++) {
+    tdEl = document.createElement('td');
+    tdEl.textContent = storeLocations[storeLocations.length-1].totalDailyCookies;
+    trEl.appendChild(tdEl);
+    cookieTable.appendChild(trEl);
+    console.log(trEl.appendChild(tdEl));
+  }
+  //ADDING NEW TOTALS ROW DATA
+  /*var totalTable = document.getElementById('totalTable');
+  var trEl = document.createElement('tr');
+  var thEl = document.createElement('th');
+  var tdEl = document.createElement('td');
+  thEl.textContent = 'total';
+  trEl.appendChild(thEl);
+
+  var hoursTotal = 0;
+  for (var i = 0; i < hours.length; i++){
+    tdEl = document.createElement('td');
+    for (var j = 0; j < storeLocations.length; j++){
+      hoursTotal += storeLocations[j].cookieSaleHour[i];
+    }
+    tdEl.textContent = hoursTotal;
+    trEl.appendChild(tdEl);
+    totalTable.appendChild(trEl);
+    hoursTotal = 0;
+  }
+
+  tdEl = document.createElement('td');
+  totalTotal += hoursTotal;
+  tdEl.textContent = totalTotal;
+  trEl.appendChild(tdEl);
+  totalTable.appendChild(trEl);
+  console.log(trEl.appendChild(tdEl));
+  */
+  // var cookieTable = document.getElementById('cookieTable');
+  // for(var i = cookieTable.rows.length; i<0; i--) {
+  //   cookieTable.deleteRow(i-1);
+  // }
+
   //   function removeTable() {
   //     var cookieTable = document.getElementById('cookieTable');
   //     var i = 6;
@@ -177,8 +223,8 @@ function handleStoreAdd(event) {
   //   }
   //   removeTable();
 
-  makeTableRow1();
-  makeTableHourlyTotal();
+  //makeTableRow1();
+  //makeTableHourlyTotal();
 
   event.target.storeName.value = null;
   event.target.minCust.value = null;
@@ -187,3 +233,5 @@ function handleStoreAdd(event) {
 
 }
 newStoreForm.addEventListener('submit', handleStoreAdd);
+//makeTableRow1();
+//makeTableHourlyTotal();
