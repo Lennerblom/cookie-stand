@@ -105,7 +105,7 @@ function makeTableRow1(){
 makeTableRow1();
 //TOTALS BY HOUR ROW
 function makeTableHourlyTotal(){
-  var totalTable = document.getElementById('totalTable');
+  var totalTable = document.getElementById('cookieTable');
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
   var tdEl = document.createElement('td');
@@ -121,16 +121,18 @@ function makeTableHourlyTotal(){
     tdEl.textContent = hoursTotal;
     trEl.appendChild(tdEl);
     totalTable.appendChild(trEl);
+    totalTotal += hoursTotal;
     hoursTotal = 0;
   }
 
   tdEl = document.createElement('td');
-  totalTotal += hoursTotal;
+  //totalTotal += hoursTotal;
   tdEl.textContent = totalTotal;
   trEl.appendChild(tdEl);
   totalTable.appendChild(trEl);
   console.log(trEl.appendChild(tdEl));
 }
+
 makeTableHourlyTotal();
 
 var newStoreForm = document.getElementById('newStoreForm');
